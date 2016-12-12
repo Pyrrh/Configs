@@ -1,48 +1,4 @@
 set nocompatible
-" set the runtime path to include Vundle and initialize
-  set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  " " Brief help
-  " :PluginList       - lists configured plugins
-  " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-  " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-  " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-  "
-  " see :h vundle for more details or wiki for FAQ
-  " Put your non-Plugin stuff after this line
-  "
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'L9'
-
-  " Misc Toolbox
-  Plugin 'Superbil/llvm.vim'
-  Plugin 'majutsushi/tagbar'
-  Plugin 'tpope/vim-surround'
-  Plugin 'wesQ3/vim-windowswap'
-  Plugin 'craigemery/vim-autotag'
-  Plugin 'kien/ctrlp.vim'
-  " Plugin 'Valloric/YouCompleteMe'
-  Plugin 'EinfachToll/DidYouMean'
-  " TPope
-  Plugin 'tpope/vim-commentary'
-  Plugin 'tpope/vim-fugitive'
-
-  " Scrooloose
-  Plugin 'scrooloose/syntastic'
-  Plugin 'scrooloose/nerdtree'
-
-  " Airline
-  Plugin 'bling/vim-airline'
-  Plugin 'vim-airline/vim-airline-themes'
-
-  " Latex
-  Plugin 'xuhdev/vim-latex-live-preview'
-
-  " Tab things
-  Plugin 'ervandew/supertab'
-  Plugin 'godlygeek/tabular'
-call vundle#end()
-
 set number              " Show line numbers
   " Relative or absolute number lines
 function! NumberToggle()
@@ -55,7 +11,7 @@ endfunction
 
 nnoremap <C-n> :call NumberToggle()<CR>
 
-noremap<C-c> "+y        " Maps Control-c to copy to clipboard
+vnoremap<C-c> "+y        " Maps Control-c to copy to clipboard
 noremap<C-v> "+p        " Maps Control-p to paste from clipboard
 
 set guioptions=i "hide menus
@@ -88,43 +44,6 @@ filetype plugin indent on
 
 syntax on
 
-" ===============================================
-" NERDTree
-"
-" opens nerdtree when opening with a file
-autocmd vimenter * NERDTree
-" Go to previous (last accessed) window
-autocmd VimEnter * wincmd p
-" maps nerdtree to control + n
-map <C-t> :NERDTreeToggle<CR>
-" Close vim if nerdtree is last window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeWinSize = 15
-" ===============================================
-"
-" You Complete Me (YCM)
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-
-" ===============================================
-" Vim-Airline
-
-" Turns on display buffers when only one tab open
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='molokai'
-let g:airline_powerline_fonts = 1
-" ===============================================
-" Tagbar
-
-
-" ===============================================
-" Ctrl-p
-
-
-" ===============================================
-" Latex Live-View 
-let g:livepreview_previewer = 'okular'
-
-" ===============================================
 " Misc Config Settings
 "
 filetype on
