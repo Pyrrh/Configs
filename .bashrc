@@ -115,7 +115,8 @@ fi
 
 #Git aliases
 alias gacommit="git add -A && git commit -m"
-alias Agacommit="git add -A :/ && git commit -m"
+alias gcomm="git add -A :/ && git commit -m"
 alias gstat="git status"
 alias glog="git log --graph --oneline --decorate --all"
 alias go="git checkout"
+alias gb="git checkout --branch"
