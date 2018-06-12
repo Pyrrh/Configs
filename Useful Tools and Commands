@@ -1,0 +1,3 @@
+# json tools
+cat foo.json | python3 -m json.tool
+jq
