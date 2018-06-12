@@ -51,20 +51,6 @@ if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
-set background=dark
-
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if has("gui_running")
-  colorscheme sorcerer
-  highlight Search guibg=black guifg=yellow gui=underline
-else
-  colorscheme ron 
-  highlight Colorcolumn ctermbg=6
-  highlight Colorcolumn guibg=Black
-  highlight Search ctermbg=black ctermfg=yellow cterm=underline
-endif
-
 set guifont=Monospace\ 12
 
 set hlsearch
