@@ -14,12 +14,6 @@ nnoremap <C-n> :call NumberToggle()<CR>
 vnoremap<C-c> "+y        " Maps Control-c to copy to clipboard
 noremap<C-v> "+p        " Maps Control-p to paste from clipboard
 
-set guioptions=i "hide menus
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
 colorscheme ron
 
 nnoremap <C-J> <C-W><C-J>
@@ -51,11 +45,8 @@ if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
-set guifont=Monospace\ 12
-
 set hlsearch
 set incsearch           " Incremental search (highlight as you type)
-set guioptions=i        " Hide menu
 
 set tabpagemax=100
 
@@ -75,11 +66,11 @@ set backspace=indent,eol,start
 
 set hidden
 set wrap
-set tabstop=3
+set tabstop=2
 set autoindent
 set copyindent
 
-set shiftwidth=3
+set shiftwidth=2
 set expandtab
 set showmatch
 set smarttab
